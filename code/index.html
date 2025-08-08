@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>To-Do List</title>
+    <link rel="canonical" href="/" />
+    <link rel="stylesheet" href="style.css" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body>
+    <header class="site-header">
+      <h1 class="site-title">To-Do</h1>
+      <p class="site-subtitle"></p>
+    </header>
+
+    <main class="app">
+      <section class="card">
+        <div class="input-row">
+          <input
+            id="task-input"
+            type="text"
+            placeholder="What do you need to do?"
+            aria-label="New task"
+          />
+          <button id="add-btn">Add</button>
+        </div>
+        <div class="filters">
+          <button id="filter-all" class="chip active">All</button>
+          <button id="filter-active" class="chip">Active</button>
+          <button id="filter-completed" class="chip">Completed</button>
+        </div>
+      </section>
+
+      <section style="margin-top: 16px" aria-label="Task list">
+        <ul id="list" class="list"></ul>
+        <div id="empty" class="empty" style="display: none">
+          No tasks yet. Add one above!
+        </div>
+      </section>
+    </main>
+    <script src="script.js"></script>
+  </body>
+</html>
